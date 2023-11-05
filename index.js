@@ -15,7 +15,7 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.json());
 
-app.get("https://social-med-be.onrender.com/", (req, res) => {
+app.get("/", (req, res) => {
   res.send("<h1>Welcome to our API</h1>");
 });
 
