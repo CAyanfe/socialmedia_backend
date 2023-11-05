@@ -14,7 +14,7 @@ export const registerUser = async (req, res) => {
     firstname,
     lastname,
   });
-  //   console.log(newUser);
+  console.log(newUser);
   try {
     await newUser.save();
     res.status(200).json(newUser);
