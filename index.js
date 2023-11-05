@@ -15,6 +15,13 @@ app.use(express.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(express.json());
 
+app.get("https://social-med-be.onrender.com/", (req, res) => {
+  res.send("<h1>Welcome to our API</h1>");
+});
+
+//usage of routes
+app.use("/auth", AuthRoute);
+
 dotenv.config();
 mongoose
   .connect(process.env.MONGO_URL)
@@ -24,13 +31,6 @@ mongoose
     )
   )
   .catch((error) => console.log(error));
-
-app.get("https://social-med-be.onrender.com/", (req, res) => {
-  res.send("<h1>Welcome to our API</h1>");
-});
-
-//usage of routes
-app.use("/auth", AuthRoute);
 
 // import express from "express";
 // import bodyParser from "body-parser";
