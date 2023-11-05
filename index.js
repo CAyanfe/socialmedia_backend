@@ -25,6 +25,10 @@ mongoose
   )
   .catch((error) => console.log(error));
 
+app.get("https://social-med-be.onrender.com/", (req, res) => {
+  res.send("<h1>Welcome to our API</h1>");
+});
+
 //usage of routes
 app.use("/auth", AuthRoute);
 
